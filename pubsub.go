@@ -227,7 +227,6 @@ func (reg *registry) remove(topic string, ch chan interface{}) {
 	}
 
 	if len(reg.revTopics[ch]) == 0 {
-		close(ch)
 		delete(reg.revTopics, ch)
 	}
 }
